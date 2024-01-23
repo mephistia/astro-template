@@ -1,0 +1,40 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:unicorn/recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:astro/recommended"
+  ],
+  "plugins": ["import-helpers", "@typescript-eslint"],
+  "rules": {
+    "unicorn/prevent-abbreviations": "off",
+    "react-hooks/exhaustive-deps": "error",
+    "react/no-array-index-key": "warn",
+    "unicorn/no-null": "off",
+    "unicorn/no-useless-undefined": "off",
+    "unicorn/no-array-reduce": "off",
+    "unicorn/filename-case": "off",
+    "unicorn/expiring-todo-comments": "off",
+    "import-helpers/order-imports": [
+      "error",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^react/",
+          "module",
+          "/^@//",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "processor": "astro/client-side-ts"
+    }
+  ]
+}

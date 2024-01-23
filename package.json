@@ -15,8 +15,23 @@
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "astro": "^4.2.3",
+    "astro-imagetools": "^0.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^6.19.1",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-astro": "^0.31.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import-helpers": "^1.2.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unicorn": "^42.0.0",
+    "prettier": "^3.2.4",
+    "prettier-plugin-astro": "^0.13.0",
+    "sass": "^1.70.0"
   }
 }
