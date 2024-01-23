@@ -1,15 +1,15 @@
 ---
 import { AlertButton, H1 } from '@/components'
-import App from '@/_app/index.astro'
+import PageTemplate from '@/templates/page-template.astro'
 
 const alertText = 'WARNING: you have been warned.'
 ---
 
-<App title="Hello Astro">
+<PageTemplate title="Hello Astro">
   <main>
     <H1>Hello Astro</H1>
     <AlertButton client:visible alertText={alertText}>
       Do not click me
     </AlertButton>
   </main>
-</App>
+</PageTemplate>
