@@ -1,0 +1,149 @@
+.sales-modalities {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.sales-modalities__checkerboard {
+  --backgroundColor: #fff;
+  --squareColor: #000;
+  --squareSize: 18px;
+
+  width: 100vw;
+  height: 35.9px;
+  background-color: var(--backgroundColor);
+  background-image: linear-gradient(
+      45deg,
+      var(--squareColor) 25%,
+      transparent 25%
+    ),
+    linear-gradient(135deg, var(--squareColor) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--squareColor) 75%),
+    linear-gradient(135deg, transparent 75%, var(--squareColor) 75%);
+  background-position:
+    0 0,
+    var(--squareSize) 0,
+    var(--squareSize) calc(-1 * var(--squareSize)),
+    0 calc(-1 * var(--squareSize));
+  background-size: calc(2 * var(--squareSize)) calc(2 * var(--squareSize));
+}
+
+.checkerboard-m {
+  width: 100%;
+  height: 13.9px;
+  --squareSize: 7px;
+}
+
+@media only screen and (max-width: 780px) {
+  .sales-modalities__checkerboard {
+    --squareSize: 15px;
+    height: 29.9px;
+  }
+
+  .checkerboard-m {
+    width: 100%;
+    height: 13.8px;
+    --squareSize: 7px;
+  }
+}
+
+.sales-modalities__container {
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  position: relative;
+}
+
+.sales-modalities__image-opacity {
+  background-color: #000000;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.sales-modalities__title {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin: 45px 0 30px;
+}
+
+.sales-modalities__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sales-modalities__list {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, min-content);
+  column-gap: 65px;
+  margin-top: 80px;
+}
+
+.sales-modalities__modality {
+  position: relative;
+  width: 280px;
+  height: 282px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.sales-modalities__modality__icon {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sales-modalities__modality__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600 !important;
+  margin: 45px 0 12px;
+  font-size: 18px;
+}
+
+.sales-modalities__modality__description {
+  padding: 0 16px;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sales-modalities__list {
+    column-gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .sales-modalities__container {
+    height: unset;
+    background-size: cover;
+    padding-bottom: 50px;
+  }
+
+  .sales-modalities__list {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 100px;
+  }
+
+  .sales-modalities__title {
+    font-size: 20px;
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .sales-modalities__modality__icon {
+    top: -15px;
+  }
+}

@@ -1,15 +1,8 @@
 ---
-import { AlertButton, H1 } from '@/components'
+import { VansStores } from '@/layouts'
 import PageTemplate from '@/templates/page-template.astro'
-
-const alertText = 'WARNING: you have been warned.'
 ---
 
 <PageTemplate title="Hello Astro">
-  <main>
-    <H1>Hello Astro</H1>
-    <AlertButton client:visible alertText={alertText}>
-      Do not click me
-    </AlertButton>
-  </main>
+  <VansStores client:visible />
 </PageTemplate>
